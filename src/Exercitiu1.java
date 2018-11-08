@@ -26,6 +26,7 @@ public class Exercitiu1 {
 			System.out.println("Este par");
 		} else {
 			System.out.println("Impar");
+
 		}
 	}
 }
