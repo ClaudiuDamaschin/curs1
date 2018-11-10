@@ -14,6 +14,8 @@ public class Exercitiul3 {
 
 	}
 
+	// tu faci aici suma elementelor. 
+	// Inainte sa returnezi suma ar trebui s-o imparti la numarul de elemente ca sa-ti returneze media si ai rezolvat problema
 	private static int mediaAritmetica(int[] array) {
 		int suma = 0;
 		for (int i = 0; i < array.length; i++) {
