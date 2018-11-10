@@ -1,14 +1,24 @@
 //Sa se implementeze o metoda care returneaza media aritmetica a numerelor dintr-un sir de numere primit ca parametru.
 
 public class Exercitiul3 {
-	public static void main(String[] args) {
-		int firstNumber = 10;
-		int secondNumber = 5;
-		int mediaAritmetica;
-		if (firstNumber <= 0) {
 
+	public static void main(String[] args) {
+
+		int[] array = { 10, 26, 38, 42, 51 };
+
+		System.out.println(mediaAritmetica(array));
+
+		int suma = mediaAritmetica(array);
+
+		int media = suma / array.length;
+
+	}
+
+	private static int mediaAritmetica(int[] array) {
+		int suma = 0;
+		for (int i = 0; i < array.length; i++) {
+			suma = suma + array[i];
 		}
-		mediaAritmetica = (firstNumber + secondNumber) / 2;
-		System.out.println("Media aritmetica este " + mediaAritmetica);
+		return media;
 	}
 }
