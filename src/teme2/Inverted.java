@@ -6,14 +6,17 @@ public class Inverted {
 	public static void main(String[] args) {
 
 		int[] a = { 5, 8, 1, 2 };
-		inverted(a);
+		int[] b = { 2, 1, 8, 5 };
+
+		inverted(a, b);
+
 	}
 
-	private static void inverted(int[] a) {
+	private static int[] inverted(int[] a, int[] b) {
+
 		for (int i = a.length - 1; i >= 0; i--) {
 			System.out.print(a[i]);
 		}
-
+		return b;
 	}
-
 }
