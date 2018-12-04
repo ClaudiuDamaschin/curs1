@@ -1,6 +1,9 @@
 package s07;
 
-public class Returneaza {
+import sessions.s07.tests.Division;
+
+public class Returneaza implements Division {
+
 	public static void main(String[] args) {
 		int a = 3;
 		int b = 5;
@@ -15,5 +18,20 @@ public class Returneaza {
 		} else {
 		}
 		return a / b;
+	}
+
+	@Override
+	public String getAuthor() {
+		return "Claudiu";
+	}
+
+	@Override
+	public int divide(int a, int b) {
+		if (b == 0) {
+			return -1;
+		} else {
+		}
+		return a / b;
+
 	}
 }
