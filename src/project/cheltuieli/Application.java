@@ -2,8 +2,6 @@ package project.cheltuieli;
 
 import project.cheltuieli.actions.AddAction;
 import project.cheltuieli.actions.DeleteAction;
-import project.cheltuieli.actions.ViewAction;
-import project.cheltuieli.actions.ViewConsumptionAction;
 import project.cheltuieli.model.Category;
 import project.cheltuieli.model.Database;
 import project.cheltuieli.utils.Serializer;
@@ -41,9 +39,6 @@ public class Application {
 		MenuItem addReading = new AddAction();
 		MenuItem deleteReading = new DeleteAction();
 
-		MenuItem viewReadings = new ViewAction();
-		MenuItem viewConsumption = new ViewConsumptionAction();
-
 		BackAction back = new BackAction("0", "Back");
 
 		Menu categoriesMenu = new Menu("1", "Categories");
@@ -53,8 +48,8 @@ public class Application {
 		categoriesMenu.setBackAction(back);
 
 		Menu costsMenu = new Menu("2", "Costs");
-		costsMenu.addItem(viewReadings);
-		costsMenu.addItem(viewConsumption);
+		costsMenu.addItem(addReading);
+		costsMenu.addItem(deleteReading);
 		costsMenu.addItem(back);
 		costsMenu.setBackAction(back);
 
