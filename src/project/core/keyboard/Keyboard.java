@@ -21,4 +21,18 @@ public class Keyboard {
 		kb.nextLine();
 		return value;
 	}
+
+	public int getString(String string) {
+
+		return 0;
+	}
+
+	public int getDate(String string) {
+		return 0;
+	}
+
+	public int getdouble(String string) {
+
+		return 0;
+	}
 }
