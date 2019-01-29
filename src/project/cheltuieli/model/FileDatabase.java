@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import project.cheltuieli.utils.ApplicationSession;
+import project.cheltuieli.ApplicationSession;
 import project.cheltuieli.utils.Serializer;
 
 public class FileDatabase implements Database, Serializable {

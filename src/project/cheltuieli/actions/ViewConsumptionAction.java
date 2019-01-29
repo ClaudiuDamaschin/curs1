@@ -1,8 +1,8 @@
 package project.cheltuieli.actions;
 
+import project.cheltuieli.ApplicationSession;
 import project.cheltuieli.model.Category;
 import project.cheltuieli.model.Database;
-import project.cheltuieli.utils.ApplicationSession;
 import project.core.keyboard.Keyboard;
 import project.core.menu.MenuItem;
 
