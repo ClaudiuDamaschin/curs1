@@ -1,7 +1,10 @@
 package project.cheltuieli;
 
-import project.cheltuieli.actions.AddAction;
-import project.cheltuieli.actions.DeleteAction;
+import project.cheltuieli.actions.AddCategories;
+import project.cheltuieli.actions.AddCosts;
+import project.cheltuieli.actions.DeleteCategory;
+import project.cheltuieli.actions.DeleteCost;
+import project.cheltuieli.actions.ViewCost;
 import project.cheltuieli.model.Category;
 import project.cheltuieli.model.Database;
 import project.cheltuieli.utils.Serializer;
@@ -18,8 +21,9 @@ public class Application {
 
 	private void init() {
 		Database database = ApplicationSession.getInstance().getDatabase();
-		database.addCategory(new Category(2018, 11, 100, 100, 0));
-		database.addCategory(new Category(2018, 12, 110, 109, 0));
+		database.addCategory(new Category("Food"));
+		database.addCategory(new Category("Health"));
+
 	}
 
 	private void run() {
@@ -36,20 +40,24 @@ public class Application {
 	}
 
 	private MenuItem createMenu() {
-		MenuItem addReading = new AddAction();
-		MenuItem deleteReading = new DeleteAction();
+		MenuItem addCategories = new AddCategories();
+		MenuItem deleteCategory = new DeleteCategory();
+		MenuItem viewCost = new ViewCost();
+		MenuItem addCosts = new AddCosts();
+		MenuItem deleteCost = new DeleteCost();
 
 		BackAction back = new BackAction("0", "Back");
 
-		Menu categoriesMenu = new Menu("1", "Categories");
-		categoriesMenu.addItem(addReading);
-		categoriesMenu.addItem(deleteReading);
+		Menu categoriesMenu = new Menu("1", "Category");
+		categoriesMenu.addItem(addCategories);
+		categoriesMenu.addItem(deleteCategory);
 		categoriesMenu.addItem(back);
 		categoriesMenu.setBackAction(back);
 
-		Menu costsMenu = new Menu("2", "Costs");
-		costsMenu.addItem(addReading);
-		costsMenu.addItem(deleteReading);
+		Menu costsMenu = new Menu("2", "Cost");
+		costsMenu.addItem(addCosts);
+		costsMenu.addItem(deleteCost);
+		costsMenu.addItem(viewCost);
 		costsMenu.addItem(back);
 		costsMenu.setBackAction(back);
 

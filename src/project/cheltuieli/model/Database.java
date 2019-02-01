@@ -3,14 +3,25 @@ package project.cheltuieli.model;
 import java.util.List;
 
 public interface Database {
+
 	void addCategory(Category category);
 
-	Category getCategoryByFoodAndHealthAndRelaxation(int food, int health, int relaxation);
+	Category getCategoryName(String name);
 
-	void editCategory(int food, int health, int relaxation);
+	List<Category> getCategoryName();
 
-	List<Category> getCategories();
+	void deleteCategory(String category);
 
-	Category getPreviousCategoryByFoodAndHealthAndRelaxation(int food, int health, int relaxation);
+	void addCost(Cost cost);
+
+	Cost getCostName(String cost);
+
+	List<Cost> getCost();
+
+	Cost getPreviousCostByYearAndMonth(int year, int month);
+
+	void deleteCost(String cost);
+
+	void viewCost(String cost);
 
 }
