@@ -16,12 +16,10 @@ public class AddCategories extends MenuItem {
 	public void doAction() {
 		// Date date = keyboard.getDate("Date: ");
 		System.out.println("add option...");
-		String food = keyboard.getString(" Food : ");
-		String health = keyboard.getString(" Health : ");
-		String relaxation = keyboard.getString(" Relaxation: ");
+		String name = keyboard.getString(" Name : ");
 
 		Category category = new Category(name);
-		ApplicationSession.getInstance().getDatabase().deleteCategory(name);
+		ApplicationSession.getInstance().getDatabase().addCategory(category);
 		// do something with values
 	}
 

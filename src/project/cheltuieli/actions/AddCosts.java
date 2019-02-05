@@ -20,12 +20,12 @@ public class AddCosts extends MenuItem {
 		// Date date = keyboard.getDate("Date: ");
 		Date date = keyboard.getDate(" Date : ");
 		Category category = keyboard.getCategory("Category:");
-		String sum = keyboard.getString("Sum:");
+		int sum = keyboard.getInt("Sum:");
 		String description = keyboard.getString("Description:");
 		String details = keyboard.getString("Details:");
 
-		Cost cost = new Cost(date, category, name, details, details);
-		ApplicationSession.getInstance().getDatabase().deleteCost(name);
+		Cost cost = new Cost(date, category, sum, description, details);
+		ApplicationSession.getInstance().getDatabase().addCost(cost);
 		// do something with values
 	}
 

@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+import project.cheltuieli.ApplicationSession;
 import project.cheltuieli.model.Category;
 
 public class Keyboard {
@@ -50,8 +51,11 @@ public class Keyboard {
 	}
 
 	public Category getCategory(String string) {
+		System.out.print(string);
+		String text = kb.nextLine();
 
-		return null;
+		Category cat = ApplicationSession.getInstance().getDatabase().getCategoryByName(text);
+		return cat;
 	}
 
 }

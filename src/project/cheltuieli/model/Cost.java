@@ -9,11 +9,11 @@ public class Cost implements Serializable {
 
 	Date date;
 	Category category;
-	String sum;
+	double sum;
 	String description;
 	String details;
 
-	public Cost(Date date, Category category, String sum, String description, String details) {
+	public Cost(Date date, Category category, double sum, String description, String details) {
 
 		this.date = date;
 		this.category = category;
@@ -22,12 +22,13 @@ public class Cost implements Serializable {
 		this.details = details;
 	}
 
-	@Override
-	public String toString() {
-		return "Cost [date=" + String.format("%5d", date) + ", category=" + String.format("%5d", category) + ", sum="
-				+ String.format("%5d", sum) + ", description=" + String.format("%5d", description) + ", details="
-				+ String.format("%5d", details) + "]";
-	}
+//	@Override
+//	public String toString() {
+
+//		return "Cost [date=" + String.format("%5d", date) + ", category=" + String.format("%5d", category) + ", sum="
+//				+ String.format("%5d", sum) + ", description=" + String.format("%5d", description) + ", details="
+//				+ String.format("%5d", details) + "]";
+//	}
 	// @Override
 	// public String toString() {
 	// return "| " + String.format("%5d", date) + " | " + String.format("%5d",
@@ -38,6 +39,12 @@ public class Cost implements Serializable {
 
 	// }
 
+	@Override
+	public String toString() {
+		return "Cost [date=" + date + ", category=" + category + ", sum=" + sum + ", description=" + description
+				+ ", details=" + details + "]";
+	}
+
 	public Date getDate() {
 		return date;
 	}
@@ -46,7 +53,7 @@ public class Cost implements Serializable {
 		return category;
 	}
 
-	public String getSum() {
+	public double getSum() {
 		return sum;
 	}
 

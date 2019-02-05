@@ -24,4 +24,6 @@ public interface Database {
 
 	void viewCost(String cost);
 
+	Category getCategoryByName(String text);
+
 }

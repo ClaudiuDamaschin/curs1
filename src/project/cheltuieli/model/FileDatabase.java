@@ -3,7 +3,6 @@ package project.cheltuieli.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale.Category;
 
 public class FileDatabase implements Database, Serializable {
 	private static final long serialVersionUID = 1L;
@@ -57,13 +56,13 @@ public class FileDatabase implements Database, Serializable {
 	}
 
 	@Override
-	public void addCost(Cost cost) {
-
+	public void addCost(Cost c) {
+		cost.add(c);
 	}
 
 	@Override
-	public void addCategory(project.cheltuieli.model.Category category) {
-
+	public void addCategory(Category category) {
+		categories.add(category);
 	}
 
 	@Override
@@ -74,6 +73,16 @@ public class FileDatabase implements Database, Serializable {
 	@Override
 	public Cost getPreviousCostByYearAndMonth(int year, int month) {
 
+		return null;
+	}
+
+	@Override
+	public Category getCategoryByName(String text) {
+		for (Category c : categories) {
+			if (c.hasName(text)) {
+				return c;
+			}
+		}
 		return null;
 	}
 
