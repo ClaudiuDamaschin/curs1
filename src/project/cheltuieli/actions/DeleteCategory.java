@@ -15,6 +15,6 @@ public class DeleteCategory extends MenuItem {
 	public void doAction() {
 
 		String category = keyboard.getString("Category ");
-		ApplicationSession.getInstance().getDatabase().deleteCategory(name);
+		ApplicationSession.getInstance().getDatabase().deleteCategory(category);
 	}
 }
