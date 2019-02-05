@@ -10,7 +10,7 @@ public interface Database {
 
 	List<Category> getCategoryName();
 
-	void deleteCategory(String category);
+	void deleteCategory(String deletecategory);
 
 	void addCost(Cost cost);
 
@@ -20,7 +20,7 @@ public interface Database {
 
 	Cost getPreviousCostByYearAndMonth(int year, int month);
 
-	void deleteCost(String cost);
+	void deleteCost(String deletecost);
 
 	void viewCost(String cost);
 

@@ -24,4 +24,5 @@ public abstract class MenuItem {
 	public String getKey() {
 		return key;
 	}
+
 }

@@ -21,8 +21,8 @@ public class Application {
 
 	private void init() {
 		Database database = ApplicationSession.getInstance().getDatabase();
-		database.addCategory(new Category("Food"));
-		database.addCategory(new Category("Health"));
+		database.addCategory(new Category("Gaz"));
+		database.addCategory(new Category("Sport"));
 
 	}
 
@@ -68,4 +68,5 @@ public class Application {
 		mainMenu.setBackAction(back);
 		return mainMenu;
 	}
+
 }

@@ -12,7 +12,7 @@ import project.cheltuieli.model.Database;
 import project.cheltuieli.model.FileDatabase;
 
 public class Serializer {
-	private static final String FILE_DATABASE = "database.ser";
+	private static final String FILE_DATABASE = "database.sers";
 
 	public void save(Database database) {
 		try {

@@ -22,19 +22,21 @@ public class Cost implements Serializable {
 		this.details = details;
 	}
 
-	// @Override
-	// public String toString() {
-	// return "Cost [date=" + date + ", category=" + category + ", sum=" + sum + ",
-	// description=" + description
-	// + ", details=" + details + "]";
-
 	@Override
 	public String toString() {
-		return "| " + String.format("%5d", date) + " | " + String.format("%5d", category) + " | "
-				+ String.format("%5d", sum) + " | " + String.format("%5d", description) + "|" + " | "
-				+ String.format("%5d", details);
-
+		return "Cost [date=" + String.format("%5d", date) + ", category=" + String.format("%5d", category) + ", sum="
+				+ String.format("%5d", sum) + ", description=" + String.format("%5d", description) + ", details="
+				+ String.format("%5d", details) + "]";
 	}
+	// @Override
+	// public String toString() {
+	// return "| " + String.format("%5d", date) + " | " + String.format("%5d",
+	// category) + " | "
+	// + String.format("%5d", sum) + " | " + String.format("%5d", description) + "|"
+	// + " | "
+	// + String.format("%5d", details);
+
+	// }
 
 	public Date getDate() {
 		return date;
@@ -55,4 +57,5 @@ public class Cost implements Serializable {
 	public String getDetails() {
 		return details;
 	}
+
 }
