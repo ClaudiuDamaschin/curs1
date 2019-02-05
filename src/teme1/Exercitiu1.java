@@ -1,3 +1,5 @@
+package teme1;
+
 import java.util.Scanner;
 
 // Sa se implementeze o metoda care verifica daca un numar primit ca parametru este par.

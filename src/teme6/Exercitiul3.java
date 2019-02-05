@@ -1,4 +1,5 @@
 //Sa se implementeze o metoda care primeste ca parametru un sir de numere si returneaza cate perechi de numere din sir
+
 //au suma egala cu 10
 //Ex: {1,3,5,6,7,8,9} => 2
 

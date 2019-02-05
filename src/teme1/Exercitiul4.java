@@ -1,3 +1,4 @@
+package teme1;
 
 //Sa se implementeze o metoda care returneaza produsul numerelor nenule dintr-un sir de numere primit ca parametru.
 

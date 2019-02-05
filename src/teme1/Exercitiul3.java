@@ -1,3 +1,5 @@
+package teme1;
+
 //Sa se implementeze o metoda care returneaza media aritmetica a numerelor dintr-un sir de numere primit ca parametru.
 
 public class Exercitiul3 {
