@@ -18,12 +18,14 @@ public interface Database {
 
 	List<Cost> getCost();
 
-	Cost getPreviousCostByYearAndMonth(int year, int month);
-
 	void deleteCost(String deletecost);
 
 	void viewCost(String cost);
 
 	Category getCategoryByName(String text);
+
+	Cost getCostByMonthAndCategory(int month, String cateogry);
+
+	Cost getPreviousCostByMonthAndCategory(int month, String cateogry);
 
 }

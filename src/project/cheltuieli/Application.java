@@ -4,7 +4,9 @@ import project.cheltuieli.actions.AddCategories;
 import project.cheltuieli.actions.AddCosts;
 import project.cheltuieli.actions.DeleteCategory;
 import project.cheltuieli.actions.DeleteCost;
+import project.cheltuieli.actions.ViewByMonthAndCategory;
 import project.cheltuieli.actions.ViewCost;
+import project.cheltuieli.actions.ViewPreviousMonth;
 import project.cheltuieli.model.Category;
 import project.cheltuieli.model.Database;
 import project.cheltuieli.utils.Serializer;
@@ -45,7 +47,8 @@ public class Application {
 		MenuItem viewCost = new ViewCost();
 		MenuItem addCosts = new AddCosts();
 		MenuItem deleteCost = new DeleteCost();
-
+		MenuItem viewByMonthAndCategory = new ViewByMonthAndCategory();
+		MenuItem viewPreviousMonth = new ViewPreviousMonth();
 		BackAction back = new BackAction("0", "Back");
 
 		Menu categoriesMenu = new Menu("1", "Category");
@@ -58,6 +61,8 @@ public class Application {
 		costsMenu.addItem(addCosts);
 		costsMenu.addItem(deleteCost);
 		costsMenu.addItem(viewCost);
+		costsMenu.addItem(viewByMonthAndCategory);
+		costsMenu.addItem(viewPreviousMonth);
 		costsMenu.addItem(back);
 		costsMenu.setBackAction(back);
 

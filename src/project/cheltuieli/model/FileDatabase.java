@@ -71,18 +71,28 @@ public class FileDatabase implements Database, Serializable {
 	}
 
 	@Override
-	public Cost getPreviousCostByYearAndMonth(int year, int month) {
-
-		return null;
-	}
-
-	@Override
 	public Category getCategoryByName(String text) {
 		for (Category c : categories) {
 			if (c.hasName(text)) {
 				return c;
 			}
 		}
+		return null;
+	}
+
+	@Override
+	public Cost getCostByMonthAndCategory(int month, String cateogry) {
+		// for (Cost cost : cost) {
+		// if (cost.hasMonthAndCategory(month, cateogry)) {
+		// return cost;
+		// }
+		// }
+		return null;
+	}
+
+	@Override
+	public Cost getPreviousCostByMonthAndCategory(int month, String cateogry) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

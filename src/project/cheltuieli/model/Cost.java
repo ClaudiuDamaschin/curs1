@@ -12,6 +12,7 @@ public class Cost implements Serializable {
 	double sum;
 	String description;
 	String details;
+	// int month;
 
 	public Cost(Date date, Category category, double sum, String description, String details) {
 
@@ -20,23 +21,12 @@ public class Cost implements Serializable {
 		this.sum = sum;
 		this.description = description;
 		this.details = details;
+		// this.month = month;
+
 	}
 
-//	@Override
-//	public String toString() {
-
-//		return "Cost [date=" + String.format("%5d", date) + ", category=" + String.format("%5d", category) + ", sum="
-//				+ String.format("%5d", sum) + ", description=" + String.format("%5d", description) + ", details="
-//				+ String.format("%5d", details) + "]";
-//	}
-	// @Override
-	// public String toString() {
-	// return "| " + String.format("%5d", date) + " | " + String.format("%5d",
-	// category) + " | "
-	// + String.format("%5d", sum) + " | " + String.format("%5d", description) + "|"
-	// + " | "
-	// + String.format("%5d", details);
-
+	// public boolean hasMonthAndCategory(int month2, String cateogry) {
+	// return month == month2 && cateogry == category2;
 	// }
 
 	@Override

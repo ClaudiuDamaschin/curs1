@@ -5,14 +5,15 @@ import project.cheltuieli.model.Cost;
 import project.cheltuieli.model.Database;
 import project.core.menu.MenuItem;
 
-public class ViewCost extends MenuItem {
-	public ViewCost() {
-		super("3", "View");
+public class ViewPreviousMonth extends MenuItem {
+
+	public ViewPreviousMonth() {
+		super("5", "Previous Month");
+
 	}
 
 	@Override
 	public void doAction() {
-
 		Database database = ApplicationSession.getInstance().getDatabase();
 		System.out.println("-------------------------------------");
 
@@ -20,5 +21,6 @@ public class ViewCost extends MenuItem {
 			System.out.println(cost);
 			System.out.println("------------------------------------");
 		}
+
 	}
 }
