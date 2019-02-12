@@ -4,12 +4,16 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import project.cheltuieli.ApplicationSession;
+import project.cheltuieli.utils.Serializer;
+
 public class FileDatabase implements Database, Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private List<Category> categories = new ArrayList<Category>();
 	private List<Cost> cost = new ArrayList<Cost>();
 
+	@Override
 	public List<Category> getCategories() {
 		return categories;
 	}
@@ -58,11 +62,17 @@ public class FileDatabase implements Database, Serializable {
 	@Override
 	public void addCost(Cost c) {
 		cost.add(c);
+		Serializer serializer = ApplicationSession.getInstance().getSerializer();
+		serializer.save(this);
+
 	}
 
 	@Override
 	public void addCategory(Category category) {
 		categories.add(category);
+		Serializer serializer = ApplicationSession.getInstance().getSerializer();
+		serializer.save(this);
+
 	}
 
 	@Override
@@ -94,6 +104,17 @@ public class FileDatabase implements Database, Serializable {
 	public Cost getPreviousCostByMonthAndCategory(int month, String cateogry) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public double getSumByCategory(Category cat) {
+		double sum = 0;
+		for (Cost cost : this.cost) {
+			if (cost.getCategory() == cat) {
+				sum += cost.getSum();
+			}
+		}
+		return sum;
 	}
 
 }

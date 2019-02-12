@@ -28,4 +28,8 @@ public interface Database {
 
 	Cost getPreviousCostByMonthAndCategory(int month, String cateogry);
 
+	List<Category> getCategories();
+
+	double getSumByCategory(Category cat);
+
 }
