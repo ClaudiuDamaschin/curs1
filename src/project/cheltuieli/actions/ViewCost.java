@@ -14,7 +14,7 @@ public class ViewCost extends MenuItem {
 	public void doAction() {
 
 		Database database = ApplicationSession.getInstance().getDatabase();
-		System.out.println("-------------------------------------");
+		System.out.println("--------------------------------------------------------------------------------------");
 
 		for (Cost cost : database.getCost()) {
 
@@ -22,7 +22,7 @@ public class ViewCost extends MenuItem {
 					+ "  Sum:  " + cost.getSum() + " | " + "Description: " + cost.getDescription() + " | "
 					+ " Details: " + cost.getDetails());
 			// System.out.println(cost);
-			System.out.println("------------------------------------");
+			System.out.println("----------------------------------------------------------------------------------");
 
 		}
 	}

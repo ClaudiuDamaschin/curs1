@@ -15,12 +15,12 @@ public class ViewByMonthAndCategory extends MenuItem {
 	public void doAction() {
 
 		Database database = ApplicationSession.getInstance().getDatabase();
-		System.out.println("-------------------------------------");
+		System.out.println("----------------------------------------------------------------------------");
 
 		for (Cost cost : database.getCost()) {
 
 			System.out.println("Date:  " + cost.getDate() + "  |  " + "  Category:  " + cost.getCategory());
-			System.out.println("-------------------------------------");
+			System.out.println("------------------------------------------------------------------------");
 
 		}
 	}
