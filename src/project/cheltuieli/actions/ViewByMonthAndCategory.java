@@ -14,12 +14,13 @@ public class ViewByMonthAndCategory extends MenuItem {
 	@Override
 	public void doAction() {
 
-		Database db = ApplicationSession.getInstance().getDatabase();
+		Database database = ApplicationSession.getInstance().getDatabase();
 		System.out.println("-------------------------------------");
 
-		for (Cost cost : db.getCost()) {
-			System.out.println(cost);
-			System.out.println("------------------------------------");
+		for (Cost cost : database.getCost()) {
+
+			System.out.println("Date:  " + cost.getDate() + "  |  " + "  Category:  " + cost.getCategory());
+			System.out.println("-------------------------------------");
 
 		}
 	}
