@@ -17,8 +17,13 @@ public class ViewCost extends MenuItem {
 		System.out.println("-------------------------------------");
 
 		for (Cost cost : database.getCost()) {
-			System.out.println(cost);
+
+			System.out.println("Date:  " + cost.getDate() + "  |  " + "  Category:  " + cost.getCategory() + "  |  "
+					+ "  Sum:  " + cost.getSum() + " | " + "Description: " + cost.getDescription() + " | "
+					+ " Details: " + cost.getDetails());
+			// System.out.println(cost);
 			System.out.println("------------------------------------");
+
 		}
 	}
 }
